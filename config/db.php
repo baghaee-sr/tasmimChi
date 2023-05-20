@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=tasmimChiDB',
+    'dsn' => 'mysql:host=localhost;dbname=testyii',
     'username' => 'root',
-    'password' => '123456',
+    'password' => 'Root@12root',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)

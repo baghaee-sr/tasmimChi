@@ -4,15 +4,23 @@ namespace app\controllers;
 
 use sadi01\bidashboard\Module;
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii2tech\ar\softdelete\SoftDeleteBehavior;
 
 class SiteController extends Controller
 {
+    const STATUS_ACTIVE = 1;
+    const STATUS_DELETED = 0;
+    const STATUS_INACTIVE = 2;
+    const RANGE_DAY = 1;
+    const RANGE_MONTH = 0;
     /**
      * {@inheritdoc}
      */
@@ -62,8 +70,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-//        $bi = Module::class;
-//        dd($bi);
         return $this->render('index');
     }
 
