@@ -34,7 +34,8 @@
         "codeception/verify": "^2.2",
         "symfony/browser-kit": "^6.0 || >=2.7 <=4.2.4",
         "symfony/var-dumper": "^6.2",
-        "yii2tech/ar-softdelete": "*"
+        "yii2tech/ar-softdelete": "*",
+        "bizley/migration": "^4.4"
     },
     "config": {
         "allow-plugins": {
