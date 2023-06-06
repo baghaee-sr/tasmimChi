@@ -41,9 +41,6 @@ class InvoiceController extends Controller
         $searchModel = new InvoiceSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
         $queryParams = \Yii::$app->request->getQueryParams();
-        if ($queryParams){
-            $queryParams = array_filter($queryParams['InvoiceSearch']);
-        }
 
         return $this->render('index', [
             'searchModel' => $searchModel,
