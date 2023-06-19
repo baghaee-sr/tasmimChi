@@ -9,6 +9,7 @@ use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use yii\bootstrap4\Modal;
 
 AppAsset::register($this);
 
@@ -63,6 +64,61 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         <?php if (!empty($this->params['breadcrumbs'])): ?>
             <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
         <?php endif ?>
+
+        <div>
+<!--            <div>-->
+<!--                --><?php //= Alert::widget() ?>
+<!--            </div>-->
+            <?php
+            Modal::begin([
+                'headerOptions' => ['id' => 'modalPjaxHeader'],
+                'id' => 'modal-pjax',
+                'bodyOptions' => [
+                    'id' => 'modalPjaxContent',
+                    'class' => 'p-3',
+                    'data' => ['show-preloader' => 0]
+                ],
+                'options' => ['tabindex' => false]
+            ]); ?>
+            <div class="text-center">
+                <div class="spinner-border text-info" role="status" style="width: 3rem; height: 3rem;">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <?php Modal::end(); ?>
+
+            <?php
+            Modal::begin([
+                'headerOptions' => ['id' => 'modalPjaxOverHeader'],
+                'id' => 'modal-pjax-over',
+                'bodyOptions' => [
+                    'id' => 'modalPjaxOverContent',
+                    'class' => 'p-3',
+                    'data' => ['show-preloader' => 0]
+                ],
+                'options' => ['tabindex' => false, 'style' => 'z-index:1051;']
+            ]); ?>
+            <div class="text-center">
+                <div class="spinner-border text-info" role="status" style="width: 3rem; height: 3rem;">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <?php Modal::end(); ?>
+
+            <div class="modal fade top-modal-with-space" id="quickAccessModal" tabindex="-1" role="dialog"
+                 aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                    <div class="modal-content-wrap">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
         <?= Alert::widget() ?>
         <?= $content ?>
     </div>

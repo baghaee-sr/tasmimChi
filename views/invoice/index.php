@@ -6,7 +6,7 @@ use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-use sadi01\bidashboard\components\ReportWidgetWidget;
+use sadi01\bidashboard\widgets\ReportModalWidget;
 
 /** @var yii\web\View $this */
 /** @var app\models\search\InvoiceSearch $searchModel */
@@ -24,7 +24,20 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('app', 'Create Invoice'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <p>
-        <?= ReportWidgetWidget::widget(['queryParams' => $queryParams, 'searchModel' => $searchModel]) ?>
+        <?= ReportModalWidget::widget([
+            'queryParams' => $queryParams,
+            'searchModel' => $searchModel,
+            'searchModelMethod' => 'searchWidget',
+            'searchRoute' => \Yii::$app->request->pathInfo,
+            'searchModelFormName' => key(\Yii::$app->request->getQueryParams()),
+            'outputColumn' => [
+                "day" => "روز",
+                "year"=> "سال",
+                "month"=> "ماه",
+                "total_count"=> "تعداد",
+                "total_amount"=> "جمع‌کل"
+            ],
+        ]) ?>
     </p>
     <p>
         <a class="btn btn-primary"

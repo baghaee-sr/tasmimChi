@@ -62,6 +62,12 @@ $config = [
                 ],
             ],
         ],
+        'formatter' => [
+            'dateFormat' => 'yyyy/MM/dd',
+            'decimalSeparator' => '/',
+            'thousandSeparator' => ',',
+            'currencyCode' => 'IR',
+        ],
     ],
     'params' => $params,
 ];
