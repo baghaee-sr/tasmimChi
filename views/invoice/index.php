@@ -25,11 +25,18 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
     <p>
         <?= ReportModalWidget::widget([
-//            'dataProvider' => $dataProvider,
             'queryParams' => $queryParams,
             'searchModel' => $searchModel,
+            'searchModelMethod' => 'searchWidget',
             'searchRoute' => \Yii::$app->request->pathInfo,
             'searchModelFormName' => key(\Yii::$app->request->getQueryParams()),
+            'outputColumn' => [
+                "day" => "روز",
+                "year"=> "سال",
+                "month"=> "ماه",
+                "total_count"=> "تعداد",
+                "total_amount"=> "جمع‌کل"
+            ],
         ]) ?>
     </p>
     <p>
