@@ -2,7 +2,7 @@
 
 namespace app\models;
 
-class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
+class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 {
     public $id;
     public $username;
@@ -101,4 +101,11 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
     {
         return $this->password === $password;
     }
+
+    public static function find()
+    {
+        return new UserQuery(get_called_class());
+    }
+
+
 }
