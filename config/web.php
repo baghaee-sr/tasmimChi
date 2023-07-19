@@ -21,6 +21,7 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'qYvuWYliGjgvKzPdIbFXzLe7bLKkYoDi',
+            'enableCsrfValidation' => true,
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -63,7 +64,7 @@ $config = [
             ],
         ],
         'formatter' => [
-            'locale' => 'fa_IR@c\alendar=persian',
+            'locale' => 'fa_IR@calendar=persian',
             'calendar' => 0,
             'dateFormat' => 'yyyy/MM/dd',
             'decimalSeparator' => '.',
