@@ -12,13 +12,13 @@ class m230520_110453_create_invoice extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('{{%invoice}}',[
-            "id" => $this->primaryKey(),
-            "title" => $this->string(),
-            "price" => $this->integer(),
-            "created_at" => $this->timestamp(),
-            "updated_at" => $this->timestamp(),
-        ]);
+//        $this->createTable('{{%invoice}}',[
+//            "id" => $this->primaryKey(),
+//            "title" => $this->string(),
+//            "price" => $this->integer(),
+//            "created_at" => $this->timestamp(),
+//            "updated_at" => $this->timestamp(),
+//        ]);
     }
 
     /**
@@ -26,23 +26,7 @@ class m230520_110453_create_invoice extends Migration
      */
     public function safeDown()
     {
-        echo "m230520_110453_create_invoice cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('{{%invoice}}');
     }
 
-    /*
-    // Use up()/down() to run migration code without a transaction.
-    public function up()
-    {
-
-    }
-
-    public function down()
-    {
-        echo "m230520_110453_create_invoice cannot be reverted.\n";
-
-        return false;
-    }
-    */
 }

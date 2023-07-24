@@ -143,7 +143,7 @@ class InvoiceSearch extends Invoice
 
         return $dataProvider;
     }
-    public function searchWidget($params, $rangeType, $startRange, $endRange)
+    public function searchWidget(string $params,int $rangeType,int $startRange,int $endRange)
     {
         $query = Invoice::find();
 
@@ -179,6 +179,7 @@ class InvoiceSearch extends Invoice
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+//        dd($dataProvider->models,$query->createCommand()->rawSql);
 
         $this->load($params);
 

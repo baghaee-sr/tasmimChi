@@ -21,7 +21,9 @@
         "sadi01/yii2-bi-dashboard": "dev-master",
         "yiisoft/yii2-bootstrap4": "^2.0",
         "kartik-v/yii2-widget-select2": "dev-master",
-        "kartik-v/yii2-widget-depdrop": "@dev"
+        "kartik-v/yii2-widget-depdrop": "@dev",
+        "symfony/var-dumper": "*",
+        "vlucas/phpdotenv": "^5.5"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
@@ -35,7 +37,6 @@
         "codeception/module-filesystem": "^2.0 || ^1.1",
         "codeception/verify": "^2.2",
         "symfony/browser-kit": "^6.0 || >=2.7 <=4.2.4",
-        "symfony/var-dumper": "^6.2",
         "yii2tech/ar-softdelete": "*",
         "bizley/migration": "^4.4"
     },

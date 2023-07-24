@@ -7,10 +7,12 @@ use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 use sadi01\bidashboard\widgets\ReportModalWidget;
+use Yii;
 
 /** @var yii\web\View $this */
 /** @var app\models\search\InvoiceSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
+/** @var  $queryParams array */
 
 $this->title = Yii::t('app', 'Invoices');
 $this->params['breadcrumbs'][] = $this->title;
@@ -28,8 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'queryParams' => $queryParams,
             'searchModel' => $searchModel,
             'searchModelMethod' => 'searchWidget',
-            'searchRoute' => \Yii::$app->request->pathInfo,
-            'searchModelFormName' => key(\Yii::$app->request->getQueryParams()),
+            'searchRoute' => Yii::$app->request->pathInfo,
+            'searchModelFormName' => key(Yii::$app->request->getQueryParams()),
             'outputColumn' => [
                 "day" => "روز",
                 "year"=> "سال",
