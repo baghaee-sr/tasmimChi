@@ -12,13 +12,13 @@ class m230520_110453_create_invoice extends Migration
      */
     public function safeUp()
     {
-//        $this->createTable('{{%invoice}}',[
-//            "id" => $this->primaryKey(),
-//            "title" => $this->string(),
-//            "price" => $this->integer(),
-//            "created_at" => $this->timestamp(),
-//            "updated_at" => $this->timestamp(),
-//        ]);
+        $this->createTable('{{%invoice}}',[
+            "id" => $this->primaryKey(),
+            "title" => $this->string(),
+            "price" => $this->integer(),
+            "created_at" => $this->timestamp(),
+            "updated_at" => $this->timestamp(),
+        ]);
     }
 
     /**
