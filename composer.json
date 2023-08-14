@@ -12,7 +12,6 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
-    "minimum-stability": "stable",
     "require": {
         "php": ">=7.4.0",
         "yiisoft/yii2": "~2.0.45",
@@ -20,10 +19,14 @@
         "yiisoft/yii2-symfonymailer": "~2.0.3",
         "sadi01/yii2-bi-dashboard": "dev-master",
         "yiisoft/yii2-bootstrap4": "^2.0",
-        "kartik-v/yii2-widget-select2": "dev-master",
+        "kartik-v/yii2-widget-select2": "^2.1.4",
         "kartik-v/yii2-widget-depdrop": "@dev",
         "symfony/var-dumper": "*",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "miloschuman/yii2-highcharts-widget": "^10.0",
+        "phpoffice/phpexcel": "~1.8",
+        "kartik-v/yii2-grid": "^3.5",
+        "baghaee/php-dumpify": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
@@ -40,7 +43,6 @@
         "yii2tech/ar-softdelete": "*",
         "bower-asset/sweetalert2": "^11.0",
         "sadi01/yii2-daterangepicker": "*"
-
     },
     "config": {
         "allow-plugins": {

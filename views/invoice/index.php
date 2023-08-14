@@ -31,14 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'searchModel' => $searchModel,
             'searchModelMethod' => 'searchWidget',
             'searchRoute' => Yii::$app->request->pathInfo,
-            'searchModelFormName' => key(Yii::$app->request->getQueryParams()),
-            'outputColumn' => [
-                "day" => "روز",
-                "year"=> "سال",
-                "month"=> "ماه",
-                "total_count"=> "تعداد",
-                "total_amount"=> "جمع‌کل"
-            ],
+            'searchModelFormName' => '',
         ]) ?>
     </p>
     <p>
